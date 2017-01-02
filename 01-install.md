@@ -48,13 +48,15 @@ cross-platform.
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python 2. I have had more experience with the syntax in Python 2.7 and I know most packages for data science are maintained for Python 2.7.
 
 ###Q2. Which Python Version Installed   
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> ```python
+which python
+python --version
 
  
 
