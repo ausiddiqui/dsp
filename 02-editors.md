@@ -60,7 +60,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> nano to start as I have experience using it, and is quite easy to do basic editing. I however would like to get used to using VIM which is more powerful.
 
 --
 
@@ -68,6 +68,6 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Using Atom. cmd-p/o to open files, cmd-g to find next. I have installed linter-flake8 and language-python packages for python language support.
 
  
