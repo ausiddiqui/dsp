@@ -57,7 +57,4 @@ How can you check the version of Python installed if you happen to be on an unfa
 >> ```bash
 which python
 python --version
-
- 
-
-
+```
