@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and Tuples in Python are both data structures that can store a list of values. They both use indexing in the same way, i.e. starting from zero, they both can be named and initiated with a comma separated list of values and can contain a mixture of different data types. The main difference though is that tuples are immutable, i.e. once a tuple is declared its contents cannot be modified. Tuples would work as keys in dictionaries as the key needs to be a value that does not change in a dictionary, the immutable nature of tuples make them relevant to use as keys.
 
 ---
 
@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Sets can contain a collection of objects like lists and supports some of the functions of lists like iterating and checking length. Sets can be both mutable and immutable (frozenset). Unlike lists, sets cannot be indexed as the collection in unordered. Additionally, Python sets are like sets from set theory in mathematics, as a result they cannot contain duplicates.
 
 ---
 
@@ -51,7 +51,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937
 
 b.  
 ```
@@ -59,7 +59,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513
 
 c.  
 ```
@@ -67,7 +67,8 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850
+
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
@@ -85,8 +86,3 @@ Edit the 5 functions in [q7_lists.py](python/q7_lists.py)
 
 ###Q8. Parsing
 Edit the 3 functions in [q8_parsing.py](python/q8_parsing.py)
-
-
-
-
-
