@@ -28,15 +28,71 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 'Lambda' functions are a simplified syntax functions that are not reused as they cannot be referenced by a name and reused again. The notation is similar to that of functional program, and it is possible to use a 'lambda' function without assigning it to a variable. They are used in cases where an inline function is a better option than writing a full function as the syntax is compact and the function won't be reused for any purpose again. When used with the 'sorted' function, they can be used to define a custom function that is used to sort the values of an iterable object. For example:
 
+```
+sorted([4, 5, -3, 6, 1, 8, -2], key=lambda x: x**2 - 10*x + 3)
+# output: [5, 4, 6, 8, 1, -2, -3]
+# In this example each element of the input list goes through the quadratic function and its evaluation is the basis for sorting the input list values.
+```
+
+```
+sorted([('tom', 'A', 9.0), ('jane', 'A+', 9.5), ('brent', 'C', 5.5)], key=lambda student_grades: student_grades[2])
+# output: [('brent', 'C', 5.5), ('tom', 'A', 9.0), ('jane', 'A+', 9.5)]
+# In this example a list of tuples is passed in, and then sorted on the third tuple variable.
+```
 ---
 
 ###Q4. List Comprehension, Map &amp; Filter
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions are another functional programming concept that allow certain types of for loops to be simplified and written in a more functional and compact way. One of the design patterns that are relevant for using list comprehensions is a for loop that reads through an existing list to check for a condition and if the condition holds appends values to a result list after manipulating the value from the existing list for which the condition holds. But the simpler unconditional loops can also be handled by list comprehensions. For example:
+```
+# For loop through a list that will look for even numbers then output them as squared numbers in a new list.
+
+old_list = [1, 2, 3, 4, 5]
+new_list = []
+
+for v in old_list:
+    if v % 2 == 0:
+        new_list.append(v**2)
+print new_list
+
+# [4, 16]
+
+# Same results using a list comprehension.
+old_list = [1, 2, 3, 4, 5]
+new_list = [v**2 for v in old_list if v % 2 == 0]
+print new_list
+# [4, 16]
+```
+
+The 'map' function is capable of doing the same in terms of converting a for loop that carries out a particular transformation on the values into a more compact syntax. The transformation fucntion can be applied using a named / defined function or by using a lambda function inline. For example, we can convert the unconditional version (i.e. square all values, not just even numbers) of function above into a map function syntax:
+
+```
+old_list = [1, 2, 3, 4, 5]
+new_list = map(lambda v: v**2, old_list)
+print new_list
+# [1, 4, 9, 16, 25]
+```
+
+Using the 'filter' function takes a sequence and applies a condition on it to return true for those items for which the condition holds true.
+
+```
+old_list = [1, 2, 3, 4, 5]
+new_list = filter(lambda v: v % 2 == 0, old_list)
+print new_list
+# [2, 4]
+```
+These two functions can be combined to carry out the same type of task as a list comprehension with a condition. The data from the original list is passed through the filter (i.e. the condition), then the results of that conditional list is passed to the map function which carries out the transformation of the filtered values. For example:
+
+```
+old_list = [1, 2, 3, 4, 5]
+new_list = map(lambda v: v**2, filter(lambda v: v % 2 == 0, old_list))
+print new_list
+# [4, 16]
+```
 
 ---
 
