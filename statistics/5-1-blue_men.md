@@ -1,6 +1,6 @@
 [Think Stats Chapter 5 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2006.html#toc50) (blue men)
 
-In the BRFSS (see Section 5.4), the distribution of heights is roughly normal with parameters = 178 cm and = 7:7 cm for men, and = 163 cm and = 7:3 cm for women.
+In the BRFSS (see Section 5.4), the distribution of heights is roughly normal with parameters mu = 178 cm and sigma = 7:7 cm for men, and mu = 163 cm and sigma = 7:3 cm for women.
 
 In order to join Blue Man Group, you have to be male between 5'10" and 6'1" (see http://bluemancasting.com). What percentage of the U.S. male population is in this range? Hint: use scipy.stats.norm.cdf.
 
@@ -34,7 +34,7 @@ thinkplot.plot(x, p, label='normal', color = '0.1')
 # Pct. of US Male eligible to join BMG:  0.477290537346
 # Mean Var Stdev 178.066221091 59.6534324401 7.72356345478
 ```
-![CDF distribution of 'US Male Height (cm) - BRFSS data vs Normal Distribution'](https://github.com/ausiddiqui/dsp/tree/master/statistics/5-1-blue_men.png "CDF distribution of 'US Male Height (cm) - BRFSS data vs Normal Distribution'")
+![CDF distribution of 'US Male Height (cm) - BRFSS data vs Normal Distribution'](/statistics/5-1-blue_men.png?raw=true "CDF distribution of 'US Male Height (cm) - BRFSS data vs Normal Distribution'")
 
 ```
 # Calculating based on the normal distribution using scipy.stats.norm
