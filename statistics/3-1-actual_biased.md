@@ -43,7 +43,7 @@ thinkplot.PrePlot(2)
 thinkplot.Pmfs([pmf_numkdhh, pmf_numkdhh_b])
 thinkplot.Config(xlabel='Number of children under 18', ylabel='PMF')
 ```
-![PMF distribution of 'Number of Children Under 18 - actual vs observed'](https://github.com/ausiddiqui/dsp/tree/master/statistics/3-1-actual_biased_pmf2.png "PMF distribution of 'Number of Children Under 18 - actual vs observed")
+![PMF distribution of 'Number of Children Under 18 - actual vs observed'](/statistics/3-1-actual_biased_pmf2.png?raw=true "PMF distribution of 'Number of Children Under 18 - actual vs observed")
 
 ```
 print("Mean of Actual vs. Biased PMF of Number of Children under 18:")
