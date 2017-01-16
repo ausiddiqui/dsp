@@ -13,13 +13,13 @@
 Read Allen Downey's [Think Stats (second edition)](http://greenteapress.com/thinkstats2/) and [Think Bayes](http://greenteapress.com/thinkbayes/) for getting up to speed with core ideas in statistics and how to approach them programmatically. Both books are completely available online, or you can buy physical copies if you would like.
 
 [<img src="img/think_stats.jpg" title="Think Stats"/>](http://greenteapress.com/thinkstats2/)
-[<img src="img/think_bayes.png" title="Think Bayes" style="float: left"; />](http://greenteapress.com/thinkbayes/) 
+[<img src="img/think_bayes.png" title="Think Bayes" style="float: left"; />](http://greenteapress.com/thinkbayes/)
 
 The ThinkStats book is approximately 200 pages in length.  It is recommended you read the entire book, particularly if you are less familiar with introductory statistical concepts.
 
-The stats exercises have been chosen to introduce/solidify some relevant statistical concepts related to data science.  The solutions for these exercises are available in the ThinkStats repository on GitHub.  You should focus on understanding the statistical concepts, python programming and interpreting the results.  If you are stuck, review the solutions and recode the python in a way that is more understandable to you. 
+The stats exercises have been chosen to introduce/solidify some relevant statistical concepts related to data science.  The solutions for these exercises are available in the ThinkStats repository on GitHub.  You should focus on understanding the statistical concepts, python programming and interpreting the results.  If you are stuck, review the solutions and recode the python in a way that is more understandable to you.
 
-For example, in the first exercise, the author has already written a function to compute Cohen's D.  You could import it, or you could write your own to practice python and develop a deeper understanding of the concept. 
+For example, in the first exercise, the author has already written a function to compute Cohen's D.  You could import it, or you could write your own to practice python and develop a deeper understanding of the concept.
 
 Complete the following exercises along with the questions in this file. They come from Think Stats, and some can be solved using code provided with the book. The preface of Think Stats [explains](http://greenteapress.com/thinkstats2/html/thinkstats2001.html#toc2) how to use the code.  
 
@@ -27,7 +27,7 @@ Communicate the problem, how you solved it, and the solution, within each of the
 
 ---
 
-## <a name="section-b"></a>2.  Instructions for Cloning the Repo 
+## <a name="section-b"></a>2.  Instructions for Cloning the Repo
 Using the code referenced in the book, follow the step-by-step instructions below.  
 
 **Step 1. Create a directory on your computer where you will do the prework.  Below is an example:**
@@ -69,24 +69,43 @@ This problem presents a robust example of actual vs biased data.  As a data scie
 This questions asks you to examine the function that produces random numbers.  Is it really random?  A good way to test that is to examine the pmf and cdf of the list of random numbers and visualize the distribution.  If you're not sure what pmf is, read more about it in Chapter 3.  
 
 ###Q4. [Think Stats Chapter 5 Exercise 1](statistics/5-1-blue_men.md) (normal distribution of blue men)
-This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic. 
+This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic.
 
 
 
-###Q5. Bayesian (Elvis Presley twin) 
+###Q5. Bayesian (Elvis Presley twin)
 
 Bayes' Theorem is an important tool in understanding what we really know, given evidence of other information we have, in a quantitative way.  It helps incorporate conditional probabilities into our conclusions.
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> P(Fraternal) = 1/125
+
+>> P(Identical) = 1/300
+
+>> P(Twin) = P(Fraternal) + P(Identical) = 0.011333
+
+>> P(Identical|Twin) = P(Identical) * P(Twin | Identical) / P(Twin)
+
+>> ```
+>> p_f = 1/125
+>> p_i = 1/300
+>> p_t = p_f + p_i
+>>
+>> print(p_f, p_i, p_t)
+>> # 0.008 0.00333333333333 0.0113333333333
+
+>> p_i_t = p_i*1/p_t
+>> print(p_i_t)
+>> # 0.294117647059
+```
 
 ---
 
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> In Frequentist statistics the data is considered to be a random sample from a repeatable experiment where the parameters have fixed values. In comparison Bayesian statistics considers the data to be fixed and the parameters being unknown and being inferred probabilistically. If X is an observed event in a study / experiment with X ~ distribution(n, p) where n is the number of observations and p is the probability of X. The Frequentist interpretation will be that the parameter p is constant and the experiment is repeatable. Whereas in the Bayesian method, the p can vary but the data in this case would be fixed.
 
 ---
 
@@ -109,10 +128,3 @@ In the theoretical world, all data related to an experiment or a scientific prob
 ## <a name="section-e"></a>5.  More Resources
 
 Some people enjoy video content such as Khan Academy's [Probability and Statistics](https://www.khanacademy.org/math/probability) or the much longer and more in-depth Harvard [Statistics 110](https://www.youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo). You might also be interested in the book [Statistics Done Wrong](http://www.statisticsdonewrong.com/) or a very short [overview](http://schoolofdata.org/handbook/courses/the-math-you-need-to-start/) from School of Data.
-
-
-
-
-
-
-
