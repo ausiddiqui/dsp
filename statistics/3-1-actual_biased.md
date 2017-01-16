@@ -25,7 +25,7 @@ thinkplot.Pmf(pmf_numkdhh)
 thinkplot.Config(xlabel='Number of children under 18', ylabel='PMF')
 ```
 
-![PMF distribution of 'Number of Children Under 18 - actual'](/3-1-actual_biased_pmf1.png?raw=true "PMF distribution of 'Number of Children Under 18 - actual")
+![PMF distribution of 'Number of Children Under 18 - actual'](/statistics/3-1-actual_biased_pmf1.png?raw=true "PMF distribution of 'Number of Children Under 18 - actual")
 
 ```
 def BiasPMF(pmf, l):
